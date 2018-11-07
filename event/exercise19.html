@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise19</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <script type="text/javascript">
+            window.addEventListener('load',function(){
+                var urls = ['http://google.com','http://yahoo.com.tw']
+                document.getElementById('url').addEventListener('blur',function(event){
+                    var compare = event.currentTarget.value;
+                    if(compare => compare === urls){
+                        document.getElementById('message').innerHTML = 'URL已存在';
+                }
+
+                    //for(var i = 0 ; i < urls.length ; i++){
+                    //    if(event.currentTarget.value === urls[i])
+                    //    document.getElementById('message').innerHTML = 'URL已存在';
+                    //    break;
+                },false);
+            },false);
+            
+        </script>
+    </head>
+    <body>
+        新增書籤：<br>
+        網址：<input id="url" type="text" value="http://">
+        <span id="message" style="color :red"></span><br>
+        名稱：<input type="text">
+    </body>
+</html>

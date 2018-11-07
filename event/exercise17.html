@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <script type="text/javascript">
+            function createOption(value , text){
+                var option = document.createElement('option');
+                option.value = value;
+                option.text = text;
+                return option;
+            }
+
+            window.onload = function(){
+                var shelve = {
+                    'chinese' : ['a','b','c'],
+                    'english' : ['d','e','f'],
+                    'math' : ['1','2','3']
+                };
+
+                document.getElementById('category').onchange = function(){
+                    var bookDiv = document.getElementById('book');
+
+                    if(bookDiv.firstChild){
+                        bookDiv.removeChild(bookDiv.firstChild);
+                    }
+                    
+                    var select = document.createElement('select');
+                    var books = shelve[this.value];
+                    books.forEach(element => {
+                        select.appendChild(createOption(element, element));
+                    });
+                    bookDiv.appendChild(select);
+                };
+            };
+        </script>
+    </head>
+    <body>
+        圖書：<br>
+        <select id="category">
+            <option>---選擇分類---</option>
+            <option value="chinese">國文</option>
+            <option value="english">英文</option>
+            <option value="math">數學</option>
+        </select>
+        </br>
+
+        採購：<br>
+        <div id="book"></div>
+        </br>
+    </body>
+</html>

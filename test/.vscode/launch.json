@@ -1,0 +1,44 @@
+{
+    // 使用 IntelliSense 以得知可用的屬性。
+    // 暫留以檢視現有屬性的描述。
+    // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Exercise11",
+            "program": "${workspaceFolder}/exercise11.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Exercise10",
+            "program": "${workspaceFolder}/exercise10.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Exercise09",
+            "program": "${workspaceFolder}/exercise09.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Exercise08-1",
+            "program": "${workspaceFolder}/exercise08-1.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Exercise08",
+            "program": "${workspaceFolder}/exercise08.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Exercise07",
+            "program": "${workspaceFolder}/exercise07.js"
+        }
+    ]
+}

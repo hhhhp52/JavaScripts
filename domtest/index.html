@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>DOM Test</title>
+        <script type="text/javascript">
+            function alertTextNodeValue(tag) {
+                alert(tag.firstChild.nodeValue);
+            };
+            
+            window.onload = function() {
+                //var title = document.getElementsByTagName('title')[0];
+                //alertTextNodeValue(title);
+
+                //var h1 = document.getElementsByTagName('h1')[0];
+                //alertTextNodeValue(h1);
+
+                //var a = document.getElementsByTagName('a')[0];
+                //alertTextNodeValue(a);
+                //alert(a.href);
+                //alert(a.getAttribute('href'));
+
+                var input = document.getElementsByTagName('input')[0];
+                input.value = 'Schnee';
+
+                document.getElementById('add').onclick = function(){
+
+                    var srcvalue = document.getElementById('src').value;
+                    var img = document.createElement('img');
+                    img.src = srcvalue
+                    document.getElementById('image').appendChild(img);
+                }
+            };
+            
+        </script>
+
+    </head>
+    <body>
+        <h1>My header</h1>
+        <a href="index.html">My Link</a>
+        <input type="text" name="name" value="guest"></input>
+        <input id="src" type="text"><button id="add">新增圖片</button></input>
+        <div id="image"></div>
+    </body>
+</html>

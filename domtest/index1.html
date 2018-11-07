@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>DOM Test</title>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('image').onclick = function(){
+                    var container1 = document.getElementById('container1');
+                    var container2 = document.getElementById('container2');
+                    if(this.parentNode === container1){
+                        container2.appendChild(this);
+                    }else{
+                        container1.appendChild(this);
+                    }
+                }
+            };
+        </script>
+
+    </head>
+    <body>
+        <h1>My header</h1>
+        容器一 ：<div id="container1"><img id="image" src="https://www.penghu-nsa.gov.tw/FileDownload/Album/Big/20161012162551758864338.jpg"/></div><br>
+        容器二 ：<div id="container2"></div>
+    </body>
+</html>

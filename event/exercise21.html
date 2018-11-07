@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise20</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <style>
+            #message1 {
+                color: blue;
+                background-color: brown;
+                border-width: 10px;
+                border-color: aqua;
+                border-style: solid;
+                width: 100px;
+                height: 50px;
+                padding: 50px;
+            }
+        </style>
+        <script src="js/exercise21.js"></script>
+        <script type="text/javascript">
+           doEvent(window , 'load' ,function(event) {
+                doEvent(getId('toggle') , 'click' , function(){
+                    var message = getId('message1');
+                    if(style(message , 'display') === 'none'){
+                        show(message);
+                    }else{
+                        hide(message);
+                    }
+                });    
+            });
+        </script>
+    </head>
+    <body>
+        <button id="toggle">切換顯示狀態</button>
+        <hr>
+         這是原本文字
+         <div id="message1">這是訊息</div>
+         這是其他文字
+    </body>
+</html>

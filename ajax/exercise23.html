@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Exercise23</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <script type="text/javascript" src="js/exercise23.js"></script>
+        <script type="text/javascript">
+            doEvent(window , 'load' ,function(event) {
+                doEvent(getId('req') , 'click' , function(){
+                    var request = xhr();
+                    request.onreadystatechange = function(){
+                        if(request.readyState === 4){
+                            if(request.status === 200){
+                                getId('table').innerHTML = request.responseText;
+                            }
+                        }
+                    };
+                    request.open('GET' , 'XMLHttpRequest-1.txt');
+                    request.send(null);
+                }); 
+            });
+        </script>
+    </head>
+    <body>
+        <button id='req'>取得表格</button>
+        <div id='table'></div>
+    </body>
+</html>
